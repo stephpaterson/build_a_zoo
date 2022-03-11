@@ -26,7 +26,7 @@ const createRouter = function (collection) {
 
 
 
-
+            return router;
 
 
 
@@ -34,3 +34,5 @@ const createRouter = function (collection) {
 
 
 }
+
+module.exports = createRouter;
