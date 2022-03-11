@@ -1,6 +1,11 @@
 import './App.css';
-import React from 'react'
-import { BrowserRouter, Route, Switch, Link} from 'react-router-dom';
+import React, { Component } from 'react'
+import { BrowserRouter, Route, Routes, Link} from 'react-router-dom';
+
+import AnimalPageContainer from './containers/AnimalsPageContainer';
+import ZooPageContainer from './containers/ZooPageContainer';
+
+
 function App() {
 
   return (
@@ -10,13 +15,19 @@ function App() {
 
             <ul>
                 <li>
-                    <Link to = '#'>Find Animals</Link>
+                    <Link to = '/animals'>Find Animals</Link>
                 </li>
                 <li>
-                    <Link to = '#'>Visit my ZOO</Link>
+                    <Link to = '/zoo'>Visit my ZOO</Link>
                 </li>
             </ul>
         </nav>
+
+            <Routes>
+                <Route path='/animals' component={AnimalPageContainer} />
+                <Route path='/zoo' component={ZooPageContainer} />
+            </Routes>
+
     </BrowserRouter>
 
   );
