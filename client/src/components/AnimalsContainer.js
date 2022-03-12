@@ -1,11 +1,11 @@
 import AnimalItem from "./AnimalItem";
 
-const AnimalsContainer = ({fetchedAnimals}) => {
+const AnimalsContainer = ({fetchedAnimals, setAddAnimal}) => {
 
 
     const animalItemNodes = fetchedAnimals.map((animal) => {
 
-        return <AnimalItem animal={animal} key={animal.id} />
+        return <AnimalItem animal={animal} key={animal.id} setAddAnimal={setAddAnimal}/>
 
     })
 

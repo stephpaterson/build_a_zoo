@@ -1,6 +1,6 @@
 
 
-const AnimalItem = ({animal}) => {
+const AnimalItem = ({animal, setAddAnimal}) => {
 
 
     return (
@@ -10,7 +10,7 @@ const AnimalItem = ({animal}) => {
             <p>{animal.habitat}</p>
             <p>{animal.diet}</p>
             <img  width='200px' heigh='auto'src={animal.image_link} alt={animal.name} />
-            <button></button>
+            <button onClick={()=>{setAddAnimal(animal)}}>Add Animal to Your Zoo</button>
         </li> 
      );
 }
