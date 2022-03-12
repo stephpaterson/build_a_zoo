@@ -19,11 +19,18 @@ const ZooPageContainer = () => {
         .then(data => setZooAnimals(data))
     }
 
+    const removeAnimal = (id) => {
+        const temp = zooAnimals.map(s => s)
+        const indexToDel = temp.map(s => s._id).indexOf(id)
+        temp.splice(indexToDel, 1)
+        setZooAnimals(temp)
+    }
+
     return(
         <>
         <h1>Zoo Page Container</h1>
         <ZooSelect/>
-        <ZooContainer zooAnimals={zooAnimals}/>
+        <ZooContainer zooAnimals={zooAnimals} removeAnimal={removeAnimal}/>
         </>
         
     )

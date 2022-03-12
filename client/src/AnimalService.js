@@ -1,4 +1,4 @@
-const baseURL = 'http://localhost:5000/api/animals';
+const baseURL = 'http://localhost:5000/api/animals/';
 
 export const postAnimal = (payload)=>{
     return fetch(baseURL, {
@@ -15,5 +15,7 @@ export const getAnimals = () => {
 }
 
 export const deleteAnimal = (id) => {
-    return fetch()
+    return fetch(baseURL + id, {
+        method: 'DELETE'
+    })
 }

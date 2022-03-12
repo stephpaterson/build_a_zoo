@@ -1,9 +1,9 @@
 import ZooAnimal from "./ZooAnimal";
 
-const ZooContainer = ({zooAnimals}) => {
+const ZooContainer = ({zooAnimals, removeAnimal}) => {
 
     const zooAnimalNodes = zooAnimals.map((animal) => {
-            return <ZooAnimal animal={animal} key={animal.id} />
+            return <ZooAnimal animal={animal} key={animal.id} removeAnimal={removeAnimal} />
     })
 
 

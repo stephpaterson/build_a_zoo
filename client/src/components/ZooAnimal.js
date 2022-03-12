@@ -1,4 +1,12 @@
-const ZooAnimal = ({animal}) => {
+import { deleteAnimal } from "../AnimalService";
+
+
+const ZooAnimal = ({animal, removeAnimal}) => {
+     const  handleClick = () => {
+            removeAnimal(animal._id)
+            deleteAnimal(animal._id)
+     }
+
     return(
 
         <li>
@@ -8,7 +16,12 @@ const ZooAnimal = ({animal}) => {
             <p>{animal.habitat}</p>
             <p>{animal.diet}</p>
             <img  width='200px' heigh='auto'src={animal.image_link} alt={animal.name} />
+
+            <button onClick={handleClick}> Release Animal </button>
+
         </li>
+
+       
        
     )
 }
