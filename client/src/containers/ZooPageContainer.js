@@ -23,7 +23,7 @@ const ZooPageContainer = () => {
         <>
         <h1>Zoo Page Container</h1>
         <ZooSelect/>
-        <ZooContainer/>
+        <ZooContainer zooAnimals={zooAnimals}/>
         </>
         
     )
