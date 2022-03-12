@@ -1,6 +1,6 @@
+import { postAnimal } from "../AnimalService";
 
-
-const AnimalItem = ({animal, setAddAnimal}) => {
+const AnimalItem = ({animal}) => {
 
 
     return (
@@ -10,7 +10,7 @@ const AnimalItem = ({animal, setAddAnimal}) => {
             <p>{animal.habitat}</p>
             <p>{animal.diet}</p>
             <img  width='200px' heigh='auto'src={animal.image_link} alt={animal.name} />
-            <button onClick={()=>{setAddAnimal(animal)}}>Add Animal to Your Zoo</button>
+            <button onClick={()=>{postAnimal(animal)}}>Add Animal to Your Zoo</button>
         </li> 
      );
 }

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import AnimalsContainer from "../components/AnimalsContainer";
 
+
 const AnimalPageContainer = () =>{
 
     const [fetchedAnimals, setFetchedAnimals] = useState([])
-    const [addAnmial, setAddAnimal] = useState(null)
 
     useEffect(() => {
         getAnimals()
