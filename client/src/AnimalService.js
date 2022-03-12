@@ -8,3 +8,8 @@ export const postAnimal = (payload)=>{
     })
     .then(res =>res.json())
 }
+
+export const getAnimals = () => {
+    return fetch(baseURL)
+    .then(res => res.json())
+}
