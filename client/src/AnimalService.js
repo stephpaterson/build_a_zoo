@@ -13,3 +13,7 @@ export const getAnimals = () => {
     return fetch(baseURL)
     .then(res => res.json())
 }
+
+export const deleteAnimal = (id) => {
+    return fetch()
+}
