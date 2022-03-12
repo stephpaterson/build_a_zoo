@@ -1,6 +1,11 @@
 import { postAnimal } from "../AnimalService";
 
-const AnimalItem = ({animal}) => {
+const AnimalItem = ({animal, removeFetchedAnimal}) => {
+
+    const handleClick = () => {
+        postAnimal(animal)
+        removeFetchedAnimal(animal._id);
+    }
 
 
     return (
@@ -10,7 +15,7 @@ const AnimalItem = ({animal}) => {
             <p>{animal.habitat}</p>
             <p>{animal.diet}</p>
             <img  width='200px' heigh='auto'src={animal.image_link} alt={animal.name} />
-            <button onClick={()=>{postAnimal(animal)}}>Add Animal to Your Zoo</button>
+            <button onClick={handleClick}>Add Animal to Your Zoo</button>
         </li> 
      );
 }
