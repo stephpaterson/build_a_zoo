@@ -7,12 +7,17 @@ import Modal from 'react-modal';
 import Navbar from './components/Navbar';
 import AnimalPageContainer from './containers/AnimalsPageContainer';
 import ZooPageContainer from './containers/ZooPageContainer';
+import UserContext from './context/UserContext';
 
 
 function App() {
 
   const [isModalOpen, setIsModalOpen] = useState(true)
+  const [ zooKeeperName, setZooKeeperName] = useState("")
 
+  const handleNameChange = (event) => {
+    setZooKeeperName(event.target.value)
+  }
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
@@ -29,10 +34,11 @@ function App() {
         <p>Welcome to build a zoo! Explore different animals and learn abotu them in your Zoo!</p>
         <form>
             <label value="">What's your Zoo Keeper name?</label>
-            <input type="text" id="name" name="name"/>
+            <input type="text" id="name" name="name" onChange={handleNameChange}/>
             <button onClick={toggleModal}>Ok</button>
         </form>
     </Modal>
+    <UserContext.Provider value={{zooKeeperName}} >
     <BrowserRouter>
 
         <Navbar />
@@ -42,6 +48,7 @@ function App() {
         </Routes>
 
     </BrowserRouter>
+    </UserContext.Provider>
     </>
   );
 }
