@@ -15,7 +15,7 @@ const ZooAnimal = ({animal, removeAnimal}) => {
     return(
         <Col>
         <Card style ={{width:'18rem'}}>
-            <Card.Img variant="top" src={animal.image_link} alt={animal.name} />
+            <Card.Img variant="top" src={animal.image_link} alt={animal.name} style={{width: "100%", height: "40vh", objectFit: 'cover'}}/>
             <Card.Body>
             <Card.Title>{animal.name}</Card.Title>
             </Card.Body>
