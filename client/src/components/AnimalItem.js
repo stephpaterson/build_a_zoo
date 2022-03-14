@@ -8,52 +8,60 @@ import { postAnimal } from "../AnimalService";
 
 const AnimalItem = ({animal, removeFetchedAnimal}) => {
 
-
-
     const [isModalOpen, setIsModalOpen] = useState(false)
-    const [quizAnswers, setQuizAnswers] = useState('')
-    // const [correctAnswer, setCorrectAnswer] = useState('')
+    // const [quizAnswers, setQuizAnswers] = useState('')
+    const [message, setMessage] = useState(false)
+
 
     const addAnimalToZoo = () => {
+
         postAnimal(animal)
         removeFetchedAnimal(animal._id);
+
     }
 
     const toggleModal = () => {
+
         setIsModalOpen(!isModalOpen);
+
     }
 
-    const checkAnswer = () => {
+    const checkAnswer = (quizAnswers) => {
 
         if(quizAnswers === animal.animal_type) {
             addAnimalToZoo()
             toggleModal()
+            setMessage(false)
+
         } else {
+            setMessage(true)
+
         }
 
     }
 
-    useEffect(() => {
-        checkAnswer()
-    }, [quizAnswers])
+    // useEffect(() => {
+    //     checkAnswer()
+    // }, [quizAnswers])
 
 
     return (
 
         <>
         <Modal
-        isOpen={isModalOpen}
-        ariaHideApp={false}
-        contentLabel = 'user options'>
-        <p>What type of animal is this?</p>
-        <div className="buttons">
-            <button onClick={() => {setQuizAnswers('Mammal')}}>Mammal</button>
-            <button onClick={() => {setQuizAnswers('Bird')}}>Bird</button>
-            <button onClick={() => {setQuizAnswers('Reptile')}}>Reptile</button>
-            <button onClick={() => {setQuizAnswers('Fish')}}>Fish</button>
-            <button onClick={() => {setQuizAnswers('Amphibian')}}>Amphibian</button>
-            <button onClick={() => {setQuizAnswers('Invertebrate')}}>Invertebrate</button>
-        </div>
+            isOpen={isModalOpen}
+            ariaHideApp={false}
+            contentLabel = 'user options'>
+            <p>What type of animal is this?</p>
+            <div className="buttons">
+                <button onClick={() => {checkAnswer('Mammal')}}>Mammal</button>
+                <button onClick={() => {checkAnswer('Bird')}}>Bird</button>
+                <button onClick={() => {checkAnswer('Reptile')}}>Reptile</button>
+                <button onClick={() => {checkAnswer('Fish')}}>Fish</button>
+                <button onClick={() => {checkAnswer('Amphibian')}}>Amphibian</button>
+                <button onClick={() => {checkAnswer('Invertebrate')}}>Invertebrate</button>
+            </div>
+            <p>{message ? 'try again' : ''}</p>
         </Modal>
         <li>
             <p>{animal.name}</p>
