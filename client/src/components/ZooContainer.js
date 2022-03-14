@@ -1,5 +1,8 @@
 import ZooAnimal from "./ZooAnimal";
- import { useState } from "react";
+import { useState } from "react";
+import Container from "react-bootstrap/Container"
+import Row from 'react-bootstrap/Row'
+
 
 const ZooContainer = ({zooAnimals, removeAnimal}) => {
 
@@ -16,12 +19,14 @@ const ZooContainer = ({zooAnimals, removeAnimal}) => {
     return (
         <>
         <h2>Visit the animals</h2>
-        <button onClick={event => setShowAnimals(event.target.value)} value=''>Show All</button>
+        <button onClick={event => setShowAnimals(event.target.value)} value=''>Show all the animals</button>
         <button onClick={event => setShowAnimals(event.target.value)} value='Diurnal'>See the animals active in the daytime</button>
         <button onClick={event => setShowAnimals(event.target.value)} value='Nocturnal'>See the animals active at night</button>
-        <ul>
-        {zooAnimalNodes}
-        </ul>
+        <Container>
+            <Row md={3} sm={1}>
+                {zooAnimalNodes}
+            </Row>
+        </Container>
         
         </>
     )
