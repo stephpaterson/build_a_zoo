@@ -3,7 +3,6 @@ import { deleteAnimal } from "../AnimalService";
 import Card from 'react-bootstrap/Card';
 import Button from "react-bootstrap/esm/Button";
 import ListGroup from "react-bootstrap/ListGroup";
-import ListGroupItem from "react-bootstrap/ListGroupItem"
 
 
 const ZooAnimal = ({animal, removeAnimal}) => {

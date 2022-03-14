@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
 
 import ZooContainer from "../components/ZooContainer";
-import ZooSelect from "../components/ZooSelect";
-
 
 import { getAnimals } from "../AnimalService";
+import { useContext } from "react";
+import UserContext from '../context/UserContext';
 
 const ZooPageContainer = () => {
 
     const [zooAnimals, setZooAnimals] = useState([]);
+
+    const {zooKeeperName} = useContext(UserContext)
 
     useEffect(() => {
         getZooAnimals()
@@ -28,8 +30,7 @@ const ZooPageContainer = () => {
 
     return(
         <>
-        <h1>Zoo Page Container</h1>
-        <ZooSelect/>
+        <h1>{zooKeeperName}'s Zoo</h1>
         <ZooContainer zooAnimals={zooAnimals} removeAnimal={removeAnimal}/>
         </>
         
