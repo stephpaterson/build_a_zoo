@@ -18,22 +18,15 @@ const ZooAnimal = ({animal, removeAnimal}) => {
             <Card.Img variant="top" src={animal.image_link} alt={animal.name} />
             <Card.Body>
             <Card.Title>{animal.name}</Card.Title>
-    
+            </Card.Body>
             <ListGroup variant="flush">
                 <ListGroup.Item>{animal.animal_type}</ListGroup.Item>
                 <ListGroup.Item>{animal.habitat}</ListGroup.Item>
                 <ListGroup.Item>{animal.diet}</ListGroup.Item>
             </ListGroup>
-        
-            
+            <Card.Body>
             <Button variant="primary" onClick={handleClick}> Release Animal </Button>
             </Card.Body>
-
-            
-            
-
-            
-
         </Card>
 
        
