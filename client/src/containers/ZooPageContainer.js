@@ -22,10 +22,10 @@ const ZooPageContainer = () => {
     }
 
     const removeAnimal = (id) => {
-        const temp = zooAnimals.map(s => s)
-        const indexToDel = temp.map(s => s._id).indexOf(id)
+        const temp = [...zooAnimals]
+        const indexToDel = temp.indexOf(id)
         temp.splice(indexToDel, 1)
-        setZooAnimals(temp)
+        setZooAnimals([...temp])
     }
 
     return(

@@ -3,7 +3,6 @@ import { useState } from "react";
 import {Container , Row, Button, ButtonGroup} from "react-bootstrap"
 
 
-
 const ZooContainer = ({zooAnimals, removeAnimal}) => {
 
     const [showAnimals, setShowAnimals] = useState('')
@@ -21,7 +20,7 @@ const ZooContainer = ({zooAnimals, removeAnimal}) => {
     return (
         <>
         <Container>
-        <h2>Visit the animalsin your zoo</h2>
+        <h2>Visit the animals in your zoo</h2>
         <ButtonGroup>
             <Button onClick={event => setShowAnimals(event.target.value)} value=''>Show all the animals</Button>
             <Button onClick={event => setShowAnimals(event.target.value)} value='Diurnal'>See the animals active in the daytime</Button>
