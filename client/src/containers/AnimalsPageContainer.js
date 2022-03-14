@@ -22,7 +22,7 @@ const AnimalPageContainer = () =>{
         const indexToDel = temp.map(s => s._id).indexOf(id)
         temp.splice(indexToDel, 1)
         setFetchedAnimals(temp)
-    }      
+    }   
 
 
     return(
