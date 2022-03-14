@@ -1,5 +1,10 @@
 import { deleteAnimal } from "../AnimalService";
 
+import Card from 'react-bootstrap/Card';
+import Button from "react-bootstrap/esm/Button";
+import ListGroup from "react-bootstrap/ListGroup";
+import ListGroupItem from "react-bootstrap/ListGroupItem"
+
 
 const ZooAnimal = ({animal, removeAnimal}) => {
      const  handleClick = () => {
@@ -9,17 +14,27 @@ const ZooAnimal = ({animal, removeAnimal}) => {
 
     return(
 
-        <li>
+        <Card style ={{width:'18rem'}}>
+            <Card.Img variant="top" src={animal.image_link} alt={animal.name} />
+            <Card.Body>
+            <Card.Title>{animal.name}</Card.Title>
+    
+            <ListGroup variant="flush">
+                <ListGroup.Item>{animal.animal_type}</ListGroup.Item>
+                <ListGroup.Item>{animal.habitat}</ListGroup.Item>
+                <ListGroup.Item>{animal.diet}</ListGroup.Item>
+            </ListGroup>
+        
+            
+            <Button variant="primary" onClick={handleClick}> Release Animal </Button>
+            </Card.Body>
 
-            <p>{animal.name}</p>
-            <p>{animal.animal_type}</p>
-            <p>{animal.habitat}</p>
-            <p>{animal.diet}</p>
-            <img  width='200px' heigh='auto'src={animal.image_link} alt={animal.name} />
+            
+            
 
-            <button onClick={handleClick}> Release Animal </button>
+            
 
-        </li>
+        </Card>
 
        
        

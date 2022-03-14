@@ -1,10 +1,12 @@
 import React from "react";
 
-import { useEffect } from "react";
+import Card from 'react-bootstrap/Card';
+
 import { useState } from "react";
 import Modal from 'react-modal';
 
 import { postAnimal } from "../AnimalService";
+import Button from "react-bootstrap/esm/Button";
 
 const AnimalItem = ({animal, removeFetchedAnimal}) => {
 
@@ -61,12 +63,13 @@ const AnimalItem = ({animal, removeFetchedAnimal}) => {
             </div>
             <p>{message}</p>
         </Modal>
-        <li>
-            <p>{animal.name}</p>
-            <img  width='200px' heigh='auto'src={animal.image_link} alt={animal.name} />
-            <button onClick={toggleModal} >Add Animal to Your Zoo</button>
-            {/* <button onClick={handleClick} >Add Animal to Your Zoo</button> */}
-        </li> 
+        <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top"  src={animal.image_link} alt={animal.name}/>
+            <Card.Body>
+            <Card.Title>{animal.name}</Card.Title>
+            <Button variant="primary" onClick={toggleModal} >Add Animal to Your Zoo</Button>
+            </Card.Body>
+        </Card> 
         </>
 
      );

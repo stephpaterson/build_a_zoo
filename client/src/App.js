@@ -4,6 +4,8 @@ import {useState} from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Modal from 'react-modal';
 
+import Button from 'react-bootstrap/Button';
+
 import Navbar from './components/Navbar';
 import AnimalPageContainer from './containers/AnimalsPageContainer';
 import ZooPageContainer from './containers/ZooPageContainer';
@@ -32,10 +34,11 @@ function App() {
       contentLabel = 'user options'>
     <h1>Welcome!</h1>
         <p>Welcome to build a zoo! Explore different animals and learn abotu them in your Zoo!</p>
-        <form>
+        <form className="zookeeper-form">
             <label value="">What's your Zoo Keeper name?</label>
-            <input type="text" id="name" name="name" onChange={handleNameChange}/>
-            <button onClick={toggleModal}>Ok</button>
+            <input className="form-control zookeeper-input" type="text" id="name" name="name" onChange={handleNameChange}/>
+            
+            <Button onClick={toggleModal}>Ok</Button>
         </form>
     </Modal>
     <UserContext.Provider value={{zooKeeperName}} >
