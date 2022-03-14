@@ -1,3 +1,6 @@
+import React from "react";
+
+import { useEffect } from "react";
 import { useState } from "react";
 import Modal from 'react-modal';
 
@@ -5,18 +8,34 @@ import { postAnimal } from "../AnimalService";
 
 const AnimalItem = ({animal, removeFetchedAnimal}) => {
 
+
+
     const [isModalOpen, setIsModalOpen] = useState(false)
+    const [quizAnswers, setQuizAnswers] = useState('')
+    // const [correctAnswer, setCorrectAnswer] = useState('')
 
-
-
-    const handleClick = () => {
+    const addAnimalToZoo = () => {
         postAnimal(animal)
         removeFetchedAnimal(animal._id);
     }
 
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);
-      }
+    }
+
+    const checkAnswer = () => {
+
+        if(quizAnswers === animal.animal_type) {
+            addAnimalToZoo()
+            toggleModal()
+        } else {
+        }
+
+    }
+
+    useEffect(() => {
+        checkAnswer()
+    }, [quizAnswers])
 
 
     return (
@@ -26,13 +45,15 @@ const AnimalItem = ({animal, removeFetchedAnimal}) => {
         isOpen={isModalOpen}
         ariaHideApp={false}
         contentLabel = 'user options'>
-        <h1>Welcome!</h1>
-            <p>Welcome to build a zoo! Explore different animals and learn abotu them in your Zoo!</p>
-            <form>
-                {/* <label value="">What's your Zoo Keeper name?</label>
-                <input type="text" id="name" name="name" onChange={handleNameChange}/> */}
-                <button onClick={toggleModal}>Ok</button>
-            </form>
+        <p>What type of animal is this?</p>
+        <div className="buttons">
+            <button onClick={() => {setQuizAnswers('Mammal')}}>Mammal</button>
+            <button onClick={() => {setQuizAnswers('Bird')}}>Bird</button>
+            <button onClick={() => {setQuizAnswers('Reptile')}}>Reptile</button>
+            <button onClick={() => {setQuizAnswers('Fish')}}>Fish</button>
+            <button onClick={() => {setQuizAnswers('Amphibian')}}>Amphibian</button>
+            <button onClick={() => {setQuizAnswers('Invertebrate')}}>Invertebrate</button>
+        </div>
         </Modal>
         <li>
             <p>{animal.name}</p>
