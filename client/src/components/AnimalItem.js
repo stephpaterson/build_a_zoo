@@ -10,7 +10,7 @@ const AnimalItem = ({animal, removeFetchedAnimal}) => {
 
     const [isModalOpen, setIsModalOpen] = useState(false)
     // const [quizAnswers, setQuizAnswers] = useState('')
-    const [message, setMessage] = useState(false)
+    const [message, setMessage] = useState('')
 
 
     const addAnimalToZoo = () => {
@@ -29,20 +29,18 @@ const AnimalItem = ({animal, removeFetchedAnimal}) => {
     const checkAnswer = (quizAnswers) => {
 
         if(quizAnswers === animal.animal_type) {
-            addAnimalToZoo()
-            toggleModal()
-            setMessage(false)
+
+            setMessage('correct')
+            setTimeout(() => addAnimalToZoo(), 1500)
+            
+            // setTimeout(toggleModal(), 1000);
 
         } else {
-            setMessage(true)
+            setMessage('try again')
 
         }
 
     }
-
-    // useEffect(() => {
-    //     checkAnswer()
-    // }, [quizAnswers])
 
 
     return (
@@ -61,7 +59,7 @@ const AnimalItem = ({animal, removeFetchedAnimal}) => {
                 <button onClick={() => {checkAnswer('Amphibian')}}>Amphibian</button>
                 <button onClick={() => {checkAnswer('Invertebrate')}}>Invertebrate</button>
             </div>
-            <p>{message ? 'try again' : ''}</p>
+            <p>{message}</p>
         </Modal>
         <li>
             <p>{animal.name}</p>
