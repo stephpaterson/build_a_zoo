@@ -29,6 +29,7 @@ const DiurnalZooComponent = ({animal, removeAnimal}) => {
             </Card.Body>
         </Card>
         </Col>
+        
     )
 }
 
