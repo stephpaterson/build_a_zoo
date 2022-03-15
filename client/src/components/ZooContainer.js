@@ -49,6 +49,16 @@ const ZooContainer = ({zooAnimals, removeAnimal}) => {
         }
     }
 
+    const showInfo = () => {
+
+        if (whatZoo === 'Diurnal') {
+            return <p>Diurnal Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, hic. Sint voluptatibus sapiente iusto voluptates, atque rem a odio deleniti velit eveniet eum quis quae.</p>
+        }
+        if (whatZoo === 'Nocturnal') {
+            return <p>Nocturnal Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptas ea ipsa corrupti libero. Non doloremque vitae necessitatibus assumenda excepturi atque dicta quidem. A, molestias.</p>
+        }
+    }
+
         // if (whatZoo === 'Diurnal') {
         //     return zooAnimals.filter(animal => {
         //         if(animal.active_time.includes(whatZoo) ) {
@@ -71,6 +81,7 @@ const ZooContainer = ({zooAnimals, removeAnimal}) => {
         <Button onClick={event => setWhatZoo(event.target.value)} value='Nocturnal'>See the animals active at night</Button>
         </Container>
         <Container>
+            {showInfo()}
             <Row md={3} sm={1}>
             {returnRightZooComponent()}
             </Row>
