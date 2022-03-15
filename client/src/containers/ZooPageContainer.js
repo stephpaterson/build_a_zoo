@@ -22,10 +22,10 @@ const ZooPageContainer = () => {
     }
 
     const removeAnimal = (id) => {
-        const temp = [...zooAnimals]
-        const indexToDel = temp.indexOf(id)
-        temp.splice(indexToDel, 1)
-        setZooAnimals([...temp])
+        const temp = zooAnimals.filter((animal)=>{
+            return animal._id !== id
+        })
+        setZooAnimals(temp)
     }
 
     return(
