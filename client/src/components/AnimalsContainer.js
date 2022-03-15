@@ -1,4 +1,4 @@
-import '../App.css';
+import './AnimalsContainer.css';
 import { useState } from "react";
 import { postAnimal } from "../AnimalService";
 import Modal from 'react-modal';
@@ -27,7 +27,7 @@ const AnimalsContainer = ({fetchedAnimals, setAddAnimal, removeFetchedAnimal}) =
 
     const checkAnswer = (quizAnswers) => {
         if(quizAnswers === selectedAnimal.animal_type) {
-            setMessage('correct');
+            setMessage('correct answer, the animal has been added to your Zoo');
             addAnimalToZoo();
             setTimeout(() => {
                 toggleModal()
@@ -63,17 +63,18 @@ const AnimalsContainer = ({fetchedAnimals, setAddAnimal, removeFetchedAnimal}) =
         <>
         <Modal
             isOpen={isModalOpen}
-            ariaHideApp={false}>
+            ariaHideApp={false}
+            className={"quiz-modal"}>
             <p>What type of animal is this?</p>
-            <div className="buttons">
-                <button onClick={() => {checkAnswer('Mammal')}}>Mammal</button>
-                <button onClick={() => {checkAnswer('Bird')}}>Bird</button>
-                <button onClick={() => {checkAnswer('Reptile')}}>Reptile</button>
-                <button onClick={() => {checkAnswer('Fish')}}>Fish</button>
-                <button onClick={() => {checkAnswer('Amphibian')}}>Amphibian</button>
-                <button onClick={() => {checkAnswer('Invertebrate')}}>Invertebrate</button>
-            </div>
             <p>{message}</p>
+            <div className="buttons">
+                <button className='quiz-button' onClick={() => {checkAnswer('Mammal')}}>Mammal</button>
+                <button className='quiz-button' onClick={() => {checkAnswer('Bird')}}>Bird</button>
+                <button className='quiz-button' onClick={() => {checkAnswer('Reptile')}}>Reptile</button>
+                <button className='quiz-button' onClick={() => {checkAnswer('Fish')}}>Fish</button>
+                <button className='quiz-button' onClick={() => {checkAnswer('Amphibian')}}>Amphibian</button>
+                <button className='quiz-button' onClick={() => {checkAnswer('Invertebrate')}}>Invertebrate</button>
+            </div>
         </Modal>
 
        
