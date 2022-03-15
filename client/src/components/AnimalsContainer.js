@@ -31,10 +31,13 @@ const AnimalsContainer = ({fetchedAnimals, setAddAnimal, removeFetchedAnimal}) =
                     <Carousel.Caption>
                       <h3> {animal.name}</h3> 
                     </Carousel.Caption>
+            
                 </Carousel.Item>
              ) })}
 
        </Carousel>
+
+    
 
 
 
@@ -48,6 +51,11 @@ const AnimalsContainer = ({fetchedAnimals, setAddAnimal, removeFetchedAnimal}) =
         
 
     );
+   
+
+   
+
+
     }
 
 export default AnimalsContainer;
