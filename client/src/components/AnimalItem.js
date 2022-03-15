@@ -6,7 +6,8 @@ import { useState } from "react";
 import Modal from 'react-modal';
 
 import { postAnimal } from "../AnimalService";
-import Button from "react-bootstrap/esm/Button";
+import {Button,  Carousel} from "react-bootstrap";
+
 
 const AnimalItem = ({animal, removeFetchedAnimal}) => {
 
@@ -63,16 +64,31 @@ const AnimalItem = ({animal, removeFetchedAnimal}) => {
             </div>
             <p>{message}</p>
         </Modal>
-        <Card style={{ width: '18rem' }}>
+        {/* <Card style={{ width: '18rem' }}>
             <Card.Img variant="top"  src={animal.image_link} alt={animal.name}/>
             <Card.Body>
             <Card.Title>{animal.name}</Card.Title>
             <Button variant="primary" onClick={toggleModal} >Add Animal to Your Zoo</Button>
             </Card.Body>
-        </Card> 
-        </>
+        </Card>  */}
+        
+        
+        <Carousel.Item>
+            <img
+                className="d-block w-100"
+                src={animal.image_link}
+                alt="First-slide"
+                    />
+            <Carousel.Caption>
+            <h3>{animal.name}</h3>
+     
+            </Carousel.Caption>
+        </Carousel.Item>
+ 
+                </>
 
      );
+     
 }
 
 export default AnimalItem;
