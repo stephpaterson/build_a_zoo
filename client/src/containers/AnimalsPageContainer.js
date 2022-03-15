@@ -29,7 +29,7 @@ const AnimalPageContainer = () =>{
         <>
         <div>
             <h1>Choose some animals for your zoo.</h1>
-            <button onClick={getAnimals}>Show me more animals</button>
+            <button onClick={getAnimals}>Discover More Animals</button>
         </div>
         <AnimalsContainer fetchedAnimals={fetchedAnimals} removeFetchedAnimal={removeFetchedAnimal}/>
             
