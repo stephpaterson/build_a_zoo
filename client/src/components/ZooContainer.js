@@ -1,35 +1,81 @@
-import ZooAnimal from "./ZooAnimal";
-import { useState } from "react";
-import {Container , Row, Button } from "react-bootstrap"
+import "./ZooContainer.css"
+import { useState } from "react"
+import AllZooComponent from "./AllZooComponent"
+import DiurnalZooComponent from "./DiurnalZooComponent"
+import NocturnalZooComponent from "./NocturnalZooComponent"
+
+import {Button, Container, Row} from 'react-bootstrap';
 
 
 const ZooContainer = ({zooAnimals, removeAnimal}) => {
 
-    const [showAnimals, setShowAnimals] = useState('')
+    const [whatZoo, setWhatZoo] = useState('')
+
+    // const [showAnimals, setShowAnimals] = useState('')
 
 
-    const zooAnimalNodes = zooAnimals.filter(animal => {
-        if(animal.active_time.includes(showAnimals) ) {
-            return animal
-        }}).map((animal) => {
-        return <ZooAnimal animal={animal} key={animal._id} removeAnimal={removeAnimal} />
-        })
-   
+    // const zooAnimalNodes = zooAnimals.filter(animal => {
+    //     if(animal.active_time.includes(showAnimals) ) {
+    //         return animal
+    //     }}).map((animal) => {
+    //     return <ZooAnimal animal={animal} key={animal._id} removeAnimal={removeAnimal} />
+    //     })
+
+    const returnRightZooComponent = () => {
+
+            return zooAnimals.filter(animal => {
+                    return animal.active_time.includes(whatZoo)
+                    }).map((animal) => {
+                        if(whatZoo === '') {
+                            return <AllZooComponent animal={animal} key={animal._id} removeAnimal={removeAnimal} />
+                        } if (whatZoo === 'Diurnal'){
+                            return <DiurnalZooComponent animal={animal} key={animal._id} removeAnimal={removeAnimal} />
+                        }
+                         if (whatZoo === 'Nocturnal'){
+                            return <NocturnalZooComponent animal={animal} key={animal._id} removeAnimal={removeAnimal} />
+                        }
+                    })
+        }
+
+    const showBackGroundColor = () => {
+        if (whatZoo === '') {
+            return 'light'
+        }
+        if (whatZoo === 'Diurnal') {
+            return 'light'
+        }
+        if (whatZoo === 'Nocturnal') {
+            return 'dark'
+        }
+    }
+
+        // if (whatZoo === 'Diurnal') {
+        //     return zooAnimals.filter(animal => {
+        //         if(animal.active_time.includes(whatZoo) ) {
+        //             return animal
+        //         }}).map((animal) => {
+        //         return <DiurnalZooComponent animal={animal} key={animal._id} removeAnimal={removeAnimal} />
+        //         })
+        // }
+        // if (whatZoo === 'Nocturnal') {
+        //     return (<NocturnalZooComponent zooAnimals={zooAnimals} removeAnimal={removeAnimal}/>)
+        // }
 
     return (
-        <>
+
+        <div className={showBackGroundColor()}>
         <Container>
         <h2>Visit the animals in your zoo</h2>
-        <Button onClick={event => setShowAnimals(event.target.value)} value=''>Show all the animals</Button>
-        <Button onClick={event => setShowAnimals(event.target.value)} value='Diurnal'>See the animals active in the daytime</Button>
-        <Button onClick={event => setShowAnimals(event.target.value)} value='Nocturnal'>See the animals active at night</Button>
+        <Button onClick={event => setWhatZoo(event.target.value)} value=''>Show all the animals</Button>
+        <Button onClick={event => setWhatZoo(event.target.value)} value='Diurnal'>See the animals active in the daytime</Button>
+        <Button onClick={event => setWhatZoo(event.target.value)} value='Nocturnal'>See the animals active at night</Button>
         </Container>
         <Container>
             <Row md={3} sm={1}>
-                {zooAnimalNodes}
+            {returnRightZooComponent()}
             </Row>
-        </Container>
-        </>
+        </Container> 
+        </div>
     )
 }
 

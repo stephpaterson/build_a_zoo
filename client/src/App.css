@@ -1,3 +1,8 @@
+
+
+
+
+
 .zookeeper-form{
   display: flex;
 }
@@ -22,6 +27,79 @@
     margin: auto;
   }
 
+
+  .header {
+    
+    text-align: center;
+    /* padding: 1%; */
+    font-family: 'Lilita One', cursive;
+    font-size: 6rem;
+    font-weight: 50;
+    margin: 1%;
+    text-shadow: 8px 5px 20px #136324; 
+    
+   
+     
+    
+  }
+
+  .nav-name {
+  
+    font-size: 1.5rem;
+    padding: 60px;
+    margin: -3%;
+    font-family: 'Lilita One', cursive;
+    text-transform: uppercase;
+    /* text-decoration: underline; */
+    /* text-shadow: 4px 5px 10px #136324; */
+   
+    
+  }
+
+ .links {
+max-width: fit-content;
+ 
+  padding: 0.7%;
+  /* margin: 2.3%; */
+ border: 5px solid black;
+ border-radius: 15px;
+ margin-left: 89%;
+ margin-top: -8%;
+ /* text-shadow: 4px 4px 5px #136324; */
+ 
+  
+ }
+
+ .links-two {
+  max-width: fit-content;
+   
+    padding: 0.7%;
+    /* margin: 2.3%; */
+   border: 5px solid black;
+   border-radius: 15px;
+   margin-left: 89%;
+   margin-bottom: -4%;
+   /* text-shadow: 4px 4px 5px #136324; */
+   
+    
+   }
+
+ a:link {
+  text-decoration: none;
+  color: black;
+  font-family: 'Lilita One', cursive;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+  font-family: 'Lilita One', cursive;
+  background-color: transparent;
+}
+
+
+
+   
 
 
 

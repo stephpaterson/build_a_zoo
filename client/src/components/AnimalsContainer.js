@@ -79,15 +79,13 @@ const AnimalsContainer = ({fetchedAnimals, setAddAnimal, removeFetchedAnimal}) =
        
        <Carousel>
         {carouselItems}
+
        </Carousel>
        </>
-
     );
-
 
 }
 
-    
 
 
 export default AnimalsContainer;
