@@ -1,14 +1,29 @@
-
-
-
+.welcome-modal {
+  background-color: #ffffff;
+  width: 50vw;
+  height: 50vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 8px solid #e9a303;
+  /* font-family: ;
+  font-size: ; */
+}
 
 
 .zookeeper-form{
   display: flex;
+  flex-direction: column;
 }
 
 .zookeeper-input{
-  margin-right: 10px;
+  margin: 10px 0;
+  outline: none;
 }
 
 
@@ -21,7 +36,6 @@
 
 
   .carousel {
-    
     width: 500px;
     height: 500px;
     margin: auto;
