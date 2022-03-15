@@ -18,9 +18,9 @@ const AnimalPageContainer = () =>{
     } 
 
     const removeFetchedAnimal = (id) => {
-        const temp = fetchedAnimals.map(s => s)
-        const indexToDel = temp.map(s => s._id).indexOf(id)
-        temp.splice(indexToDel, 1)
+        const temp = fetchedAnimals.filter((animal)=>{
+            return animal.id !== id
+        })
         setFetchedAnimals(temp)
     }   
 
