@@ -1,7 +1,6 @@
 import ZooAnimal from "./ZooAnimal";
 import { useState } from "react";
-import styled from 'styled-components';
-import {Container , Row, Button, ButtonGroup, CardGroup} from "react-bootstrap"
+import {Container , Row, Button } from "react-bootstrap"
 
 
 const ZooContainer = ({zooAnimals, removeAnimal}) => {
@@ -15,14 +14,7 @@ const ZooContainer = ({zooAnimals, removeAnimal}) => {
         }}).map((animal) => {
         return <ZooAnimal animal={animal} key={animal._id} removeAnimal={removeAnimal} />
         })
-
-    const CardContainer = styled.div`
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        align-items: stretch;
-        row-gap: 10px;
-    `    
+   
 
     return (
         <>
@@ -32,13 +24,11 @@ const ZooContainer = ({zooAnimals, removeAnimal}) => {
         <Button onClick={event => setShowAnimals(event.target.value)} value='Diurnal'>See the animals active in the daytime</Button>
         <Button onClick={event => setShowAnimals(event.target.value)} value='Nocturnal'>See the animals active at night</Button>
         </Container>
-        {/* <Container>
-            <Row md={3} sm={1}> */}
-        <CardContainer>
+        <Container>
+            <Row md={3} sm={1}>
                 {zooAnimalNodes}
-        </CardContainer>
-            {/* </Row>
-        </Container> */}
+            </Row>
+        </Container>
         </>
     )
 }
