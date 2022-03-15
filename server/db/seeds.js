@@ -65,5 +65,22 @@ db.animals.insertMany([
     geo_range: "Malaysia and Sumatra",
     image_link: "https://upload.wikimedia.org/wikipedia/commons/a/a4/DPPP_5348.jpg",
     id: 162
+    },
+    {
+    name: "African Painted Dog",
+    latin_name: "Lycaon pictus",
+    animal_type: "Mammal",
+    active_time: "Nocturnal",
+    length_min: 2.5,
+    length_max: 4,
+    weight_min: 44,
+    weight_max: 71,
+    lifespan: 10,
+    habitat: "Savannah, woodland and semi-desert",
+    diet: "Primarily antelope; some warthogs, hares and small animals",
+    geo_range: "Central and Southern Africa",
+    image_link: "https://upload.wikimedia.org/wikipedia/commons/b/ba/African_wild_dog_%28Lycaon_pictus_pictus%29.jpg",
+    id: 4
     }
+
     ])
