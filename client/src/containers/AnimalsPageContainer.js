@@ -18,10 +18,10 @@ const AnimalPageContainer = () =>{
     } 
 
     const removeFetchedAnimal = (id) => {
-        const temp = fetchedAnimals.map(s => s)
-        const indexToDel = temp.map(s => s._id).indexOf(id)
+        const temp = [...fetchedAnimals]
+        const indexToDel = temp.indexOf(id)
         temp.splice(indexToDel, 1)
-        setFetchedAnimals(temp)
+        setFetchedAnimals([...temp])
     }   
 
 
