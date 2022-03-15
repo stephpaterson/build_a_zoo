@@ -1,3 +1,5 @@
+
+import '../App.css';
 import React from "react";
 
 import Card from 'react-bootstrap/Card';
@@ -72,8 +74,8 @@ const AnimalItem = ({animal, removeFetchedAnimal}) => {
             </Card.Body>
         </Card>  */}
         
-        
-        <Carousel.Item>
+       
+        {/* <Carousel.Item>
             <img
                 className="d-block w-100"
                 src={animal.image_link}
@@ -83,8 +85,8 @@ const AnimalItem = ({animal, removeFetchedAnimal}) => {
             <h3>{animal.name}</h3>
      
             </Carousel.Caption>
-        </Carousel.Item>
- 
+        </Carousel.Item> */}
+       
                 </>
 
      );
