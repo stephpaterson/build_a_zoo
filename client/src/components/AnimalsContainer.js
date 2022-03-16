@@ -27,14 +27,14 @@ const AnimalsContainer = ({fetchedAnimals, setAddAnimal, removeFetchedAnimal}) =
 
     const checkAnswer = (quizAnswers) => {
         if(quizAnswers === selectedAnimal.animal_type) {
-            setMessage('correct answer, the animal has been added to your Zoo');
+            setMessage('Correct answer, the animal has been added to your Zoo');
             addAnimalToZoo();
             setTimeout(() => {
                 toggleModal()
                 setMessage('')
             }, 1500);
         } else {
-            setMessage('try again')
+            setMessage('Try again')
         }
     }
 
@@ -67,7 +67,7 @@ const AnimalsContainer = ({fetchedAnimals, setAddAnimal, removeFetchedAnimal}) =
             isOpen={isModalOpen}
             ariaHideApp={false}
             className={"quiz-modal"}>
-            <p>What type of animal is this?</p>
+            <p className='what-animal'>What type of animal is this?</p>
             <p>{message}</p>
             <div className="buttons">
                 <button className='quiz-button' onClick={() => {checkAnswer('Mammal')}}>Mammal</button>

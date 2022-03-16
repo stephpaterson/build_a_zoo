@@ -1,7 +1,7 @@
 .quiz-modal {
 background-color: #ffffff;
   width: 50vw;
-  height: 50vh;
+  height: 70vh;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -21,4 +21,9 @@ background-color: #ffffff;
 .quiz-button {
     width: 250px;
     margin-bottom: 2px;
+    border-radius: 15px;
+}
+
+.what-animal {
+  font-size: 20px;;
 }
