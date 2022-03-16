@@ -5,3 +5,15 @@
 .dark {
     background-color: rgb(153, 119, 119)
 }
+
+.zoo-buttons-and-animals-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.zoo-animals-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    margin-top: 10px;
+}

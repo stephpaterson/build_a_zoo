@@ -76,18 +76,21 @@ const ZooContainer = ({zooAnimals, removeAnimal}) => {
     return (
 
         <div className={showBackGroundColor()}>
-        <Container>
-        <h2>Visit the animals in your zoo</h2>
-        <Button onClick={event => setWhatZoo(event.target.value)} value=''>Show all the animals</Button>
-        <Button onClick={event => setWhatZoo(event.target.value)} value='Diurnal'>See the animals active in the daytime</Button>
-        <Button onClick={event => setWhatZoo(event.target.value)} value='Nocturnal'>See the animals active at night</Button>
-        </Container>
-        <Container>
-            {showInfo()}
-            <Row md={3} sm={1}>
-            {returnRightZooComponent()}
-            </Row>
-        </Container> 
+            <div className="zoo-buttons-and-animals-container">
+                <div className="zoo-button-container">
+                <h2>Visit the animals in your zoo</h2>
+                <Button onClick={event => setWhatZoo(event.target.value)} value=''>Show all the animals</Button>
+                <Button onClick={event => setWhatZoo(event.target.value)} value='Diurnal'>See the animals active in the daytime</Button>
+                <Button onClick={event => setWhatZoo(event.target.value)} value='Nocturnal'>See the animals active at night</Button>
+                </div>
+
+                <div className="zoo-animals-container">
+                    {showInfo()}
+                    {returnRightZooComponent()}
+                </div>
+            </div>
+
+
         </div>
     )
 }
