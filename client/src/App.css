@@ -1,3 +1,12 @@
+body {
+  background-image: url("https://img.freepik.com/free-vector/organic-flat-jungle-background_23-2148952811.jpg?t=st=1647337714~exp=1647338314~hmac=43fe254366ac8d06c49c9ced6bcf90df2c2fd4fdf68c99ac332241f51da32978&w=1800") ;
+  background-size: cover;
+
+}
+
+
+
+
 .welcome-modal {
   background-color: #ffffff;
   width: 50vw;
