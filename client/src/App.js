@@ -3,7 +3,6 @@ import React from 'react'
 import {useState} from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Modal from 'react-modal';
-// import { useToggle } from "./hooks"
 
 import Navbar from './components/Navbar';
 import AnimalPageContainer from './containers/AnimalsPageContainer';
@@ -42,9 +41,9 @@ function App() {
       contentLabel = 'user options'
       className={"welcome-modal"}>
         <h1>Welcome!</h1>
-        <p>Welcome to build a zoo! Explore different animals and learn abotu them in your Zoo!</p>
+        <p>Welcome to build a zoo! Explore different animals and learn about them in your Zoo!</p>
         <form onSubmit={handleSubmit} className="zookeeper-form">
-            <label value="">What's your Zoo Keeper name?</label>
+            <label className="welcome-label">What's your Zoo Keeper name?</label>
             <input className="zookeeper-input" type="text" id="name" name="name" onChange={handleNameChange} autoFocus/>
 
             <button className="modal-bttn" onClick={toggleModal}>Ok</button>

@@ -29,7 +29,7 @@ const ZooPageContainer = () => {
     }
 
     return(
-        <div classname="zoo-page-div">
+        <div className="zoo-page-div">
         <ZooContainer zooAnimals={zooAnimals} removeAnimal={removeAnimal}/>
         </div>
         

@@ -22,7 +22,7 @@ nav {
 .welcome-modal {
   background-color: #ffffff;
   width: 50vw;
-  height: 50vh;
+  height: 55vh;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -33,9 +33,14 @@ nav {
   align-items: center;
   border: 8px solid #4CAF50;
   border-radius: 15px;
-  /* font-family: ;
-  font-size: ; */
+  padding: 0 190px;
 }
+
+.welcome-modal label,
+.welcome-modal p {
+  text-align: center;
+}
+
 
 
 .zookeeper-form{
@@ -45,6 +50,7 @@ nav {
 
 .zookeeper-input{
   margin: 10px 0;
+  padding: 6px 10px;
   outline: none;
 }
 
