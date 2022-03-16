@@ -17,11 +17,18 @@ function App() {
 
   const handleNameChange = (event) => {
     setZooKeeperName(event.target.value)
-  }
-
+  }  
+  
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    toggleModal()
+  }
+
+
 
   return (
 
@@ -33,10 +40,10 @@ function App() {
       className={"welcome-modal"}>
         <h1>Welcome!</h1>
         <p>Welcome to build a zoo! Explore different animals and learn abotu them in your Zoo!</p>
-        <form className="zookeeper-form">
+        <form onSubmit={handleSubmit} className="zookeeper-form">
             <label value="">What's your Zoo Keeper name?</label>
             <input className="zookeeper-input" type="text" id="name" name="name" onChange={handleNameChange} autoFocus/>
-            <button onClick={toggleModal}>Ok</button>
+            <button>Ok</button>
         </form>
     </Modal>
 
