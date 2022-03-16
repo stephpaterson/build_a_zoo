@@ -11,10 +11,15 @@
     transform: translate(-50%,-50%);
 }
 
+.middle h3 {
+    margin:0;
+    padding: 0;
+}
+
 .card{
     cursor: pointer;
     width: 250px;
-    height: 250px;
+    height: 300px;
     border-radius: 10px;
   }
 
@@ -29,14 +34,13 @@
   }
 
 .front img{
-    width: 100%;
-    height: auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    width: 250px;
+    height: 300px;
+    object-fit: cover
 }
 
 .front{
+    background-color: #3e8e41;
     transform: perspective(600px) rotateY(0deg);
 }
 
@@ -53,7 +57,19 @@
 
 .info{
     margin: 20px 0;
-  }
+}
+
+.info p {
+    padding: 0 5px;
+    margin: 3px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.orange {
+    color: #f08522;
+}
 
 .info a{
 display: inline-flex;
@@ -77,6 +93,12 @@ transform: perspective(600px) rotateY(-180deg);
 }
 .card:hover > .back{
 transform: perspective(600px) rotateY(0deg);
+}
+
+.release-button {
+    padding: 2px;
+    border-radius: 15px;
+    margin-top: 8px;
 }
   
 
