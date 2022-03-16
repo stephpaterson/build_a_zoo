@@ -28,9 +28,9 @@ const AnimalPageContainer = () =>{
     return(
         <>
         <div className="animal-header">
-            <h1>Choose some animals for your zoo.</h1>
+            <h1>CHOOSE SOME ANIMNALS FOR YOUR ZOO</h1>
             </div>
-            <button className="discover-bttn" onClick={getAnimals}>Discover More Animals</button>
+            <button className="discover-bttn" onClick={getAnimals}>DISCOVER MORE ANIMALS</button>
         
         <AnimalsContainer fetchedAnimals={fetchedAnimals} removeFetchedAnimal={removeFetchedAnimal}/>
             

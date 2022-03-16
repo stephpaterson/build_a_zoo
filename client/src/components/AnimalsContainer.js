@@ -52,7 +52,7 @@ const AnimalsContainer = ({fetchedAnimals, setAddAnimal, removeFetchedAnimal}) =
             </div>
             <Carousel.Caption>
               <h3> {animal.name}</h3> 
-              <button className="add-animal-bttn" onClick={() => handleClick(animal)} >Add Animal to Your Zoo</button>
+              <button className="add-animal-bttn" onClick={() => handleClick(animal)} >ADD ANIMAL TO YOUR ZOO</button>
             </Carousel.Caption>
         </Carousel.Item>
 
