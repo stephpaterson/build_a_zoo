@@ -8,6 +8,12 @@
   
 }
 
+.night-time {
+  background-image: url("https://img.freepik.com/free-vector/full-moon-night-sky-dark-forest-landscape_107791-9496.jpg?w=1380&t=st=1647444269~exp=1647444869~hmac=6a9b291e2301d4053a6f579e2f584b9b1674d79316c00c6e28b63f4b00c8b3c3");
+  background-size: cover;
+  min-height: 100vh;
+}
+
 nav {
   height: 20vh;
 }
