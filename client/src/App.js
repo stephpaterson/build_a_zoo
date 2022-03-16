@@ -36,7 +36,7 @@ function App() {
         <form className="zookeeper-form">
             <label value="">What's your Zoo Keeper name?</label>
             <input className="zookeeper-input" type="text" id="name" name="name" onChange={handleNameChange} autoFocus/>
-            <button onClick={toggleModal}>Ok</button>
+            <button className="modal-bttn" onClick={toggleModal}>Ok</button>
         </form>
     </Modal>
 

@@ -48,6 +48,7 @@ body {
     width: 500px;
     height: 500px;
     margin: auto;
+    /* border: solid black 5px; */
   }
 
 
@@ -84,10 +85,11 @@ max-width: fit-content;
  
   padding: 0.7%;
   /* margin: 2.3%; */
- border: 5px solid black;
+ border: 5px solid rgb(0, 225, 255);
  border-radius: 15px;
  margin-left: 89%;
  margin-top: -8%;
+ background-color: aqua;
  /* text-shadow: 4px 4px 5px #136324; */
  
   
@@ -98,10 +100,11 @@ max-width: fit-content;
    
     padding: 0.7%;
     /* margin: 2.3%; */
-   border: 5px solid black;
+   border: 5px solid rgb(0, 225, 255);
    border-radius: 15px;
    margin-left: 89%;
    margin-bottom: -4%;
+   background-color: aqua;
    /* text-shadow: 4px 4px 5px #136324; */
    
     
@@ -119,6 +122,54 @@ a:visited {
   font-family: 'Lilita One', cursive;
   background-color: transparent;
 }
+
+
+.animal-header {
+  text-align: center;
+
+}
+
+.discover-bttn {
+margin-left: 78%;
+border-radius: 15px;
+
+}
+
+button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  /* outline: none; */
+  color: black#fff;
+  background-color: #f08522;
+  border: 5px solid #f76402;
+ 
+  /* box-shadow: 0 9px #999; */
+  border-radius: 50px;
+}
+
+.button:hover {background-color: #3e8e41}
+
+/* .button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+} */
+
+
+.modal-bttn {
+  background-color: #4CAF50;
+}
+
+.add-animal-bttn{
+  border-radius: 15px;
+}
+   
+
+
 
 
 
