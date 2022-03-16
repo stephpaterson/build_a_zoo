@@ -1,8 +1,6 @@
 import "./ZooContainer.css"
 import { useState } from "react"
-import AllZooComponent from "./AllZooComponent"
-import DiurnalZooComponent from "./DiurnalZooComponent"
-import NocturnalZooComponent from "./NocturnalZooComponent"
+import ZooAnimal from "./ZooAnimal"
 
 import {Button, Container, Row} from 'react-bootstrap';
 
@@ -23,19 +21,23 @@ const ZooContainer = ({zooAnimals, removeAnimal}) => {
 
     const returnRightZooComponent = () => {
 
-            return zooAnimals.filter(animal => {
-                    return animal.active_time.includes(whatZoo)
-                    }).map((animal) => {
-                        if(whatZoo === '') {
-                            return <AllZooComponent animal={animal} key={animal._id} removeAnimal={removeAnimal} />
-                        } if (whatZoo === 'Diurnal'){
-                            return <DiurnalZooComponent animal={animal} key={animal._id} removeAnimal={removeAnimal} />
-                        }
-                         if (whatZoo === 'Nocturnal'){
-                            return <NocturnalZooComponent animal={animal} key={animal._id} removeAnimal={removeAnimal} />
-                        }
-                    })
-        }
+            // return zooAnimals.filter(animal => {
+            //         return animal.active_time.includes(whatZoo)
+            //         }).map((animal) => {
+            //             if(whatZoo === '') {
+            //                 return <AllZooComponent animal={animal} key={animal._id} removeAnimal={removeAnimal} />
+            //             } if (whatZoo === 'Diurnal'){
+            //                 return <DiurnalZooComponent animal={animal} key={animal._id} removeAnimal={removeAnimal} />
+            //             }
+            //              if (whatZoo === 'Nocturnal'){
+            //                 return <NocturnalZooComponent animal={animal} key={animal._id} removeAnimal={removeAnimal} />
+            //             }
+            //         })
+
+    return zooAnimals.filter(animal => {
+        return animal.active_time.includes(whatZoo)
+        }).map(animal => <ZooAnimal animal={animal} key={animal._id} removeAnimal={removeAnimal} />)
+    }
 
     const showBackGroundColor = () => {
         if (whatZoo === '') {
