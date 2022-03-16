@@ -1,3 +1,48 @@
+import './ZooAnimal.css'
+
+import { deleteAnimal } from "../AnimalService";
+
+// import Card from 'react-bootstrap/Card';
+// import Button from "react-bootstrap/esm/Button";
+// import ListGroup from "react-bootstrap/ListGroup";
+// import Col from 'react-bootstrap/Col'
+
+
+const ZooAnimal = ({animal, removeAnimal}) => {
+     const  handleClick = () => {
+            removeAnimal(animal._id)
+            deleteAnimal(animal._id)
+     }
+
+    return(
+
+        <div className="card middle">
+
+            <div className="front">
+                <img src={animal.image_link} alt={animal.name} />
+            </div>
+
+            <div className="back">
+                <div className="back-content middle">
+                    <h3>{animal.name}</h3>
+                    <div className="info">
+                        <p>Type: {animal.animal_type}</p>
+                        <p>Habitat: {animal.habitat}</p>
+                        <p>Diet: {animal.diet}</p>
+                        <button variant="primary" onClick={handleClick}> Release Animal </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    )
+}
+
+export default ZooAnimal;
+
+
 // import { deleteAnimal } from "../AnimalService";
 
 // import Card from 'react-bootstrap/Card';
