@@ -26,9 +26,9 @@ const AnimalPageContainer = () =>{
 
 
     return(
-        <>
+        <div className="animal-page-div">
         <div className="animal-header">
-            <h1>CHOOSE FOR YOUR ZOO</h1>
+            <h1>Find Animals For Your Zoo</h1>
             </div>
             <button className="discover-bttn" onClick={getAnimals}>DISCOVER <div className="line-break"></div>
             MORE 
@@ -37,7 +37,7 @@ const AnimalPageContainer = () =>{
         
         <AnimalsContainer fetchedAnimals={fetchedAnimals} removeFetchedAnimal={removeFetchedAnimal}/>
             
-        </>
+        </div>
 
     )
 }
