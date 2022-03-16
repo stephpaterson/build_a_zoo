@@ -40,13 +40,13 @@ function App() {
       ariaHideApp={false}
       contentLabel = 'user options'
       className={"welcome-modal"}>
-        <h1>Welcome!</h1>
-        <p>Welcome to build a zoo! Explore different animals and learn about them in your Zoo!</p>
+        <h1>Hi!</h1>
+        <p>Welcome to Build a Zoo where you can create your own zoo and learn about the animals.</p> 
         <form onSubmit={handleSubmit} className="zookeeper-form">
             <label >What's your Zoo Keeper name?</label>
             <input className="zookeeper-input" type="text" id="name" name="name" onChange={handleNameChange} autoFocus/>
 
-            <button className="modal-bttn" onClick={toggleModal}>Ok</button>
+            <button className="modal-bttn" onClick={toggleModal}>Let's Go</button>
 
         </form>
     </Modal>
