@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: "montserrat";
 }
 
 .middle{
@@ -14,8 +13,8 @@
 
 .card{
     cursor: pointer;
-    width: 500px;
-    height: 500px;
+    width: 250px;
+    height: 250px;
     border-radius: 10px;
   }
 
@@ -30,8 +29,11 @@
   }
 
 .front img{
-    height: 100%;
-    width: auto;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .front{

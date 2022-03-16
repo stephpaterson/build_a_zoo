@@ -3,17 +3,20 @@ import React from 'react'
 import {useState} from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Modal from 'react-modal';
+// import { useToggle } from "./hooks"
 
 import Navbar from './components/Navbar';
 import AnimalPageContainer from './containers/AnimalsPageContainer';
 import ZooPageContainer from './containers/ZooPageContainer';
 import UserContext from './context/UserContext';
+import NightContext from './context/NightContext';
 
 
 function App() {
 
   const [isModalOpen, setIsModalOpen] = useState(true)
   const [ zooKeeperName, setZooKeeperName] = useState("")
+  const [ isDarkMode, setIsDarkMode] = useState(false)
 
   const handleNameChange = (event) => {
     setZooKeeperName(event.target.value)
@@ -50,15 +53,17 @@ function App() {
     </Modal>
 
     <UserContext.Provider value={{zooKeeperName}} >
+    <NightContext.Provider value={{isDarkMode, setIsDarkMode}}>
     <BrowserRouter>
-
+        <div className={isDarkMode ? "night-time" : "day-time"}>
         <Navbar />
         <Routes>
             <Route path='/' element={<AnimalPageContainer />} />
             <Route path='/zoo' element={<ZooPageContainer />} />
         </Routes>
-
+        </div>
     </BrowserRouter>
+    </NightContext.Provider>
     </UserContext.Provider>
     </>
   );

@@ -9,16 +9,10 @@ const Navbar = () => {
 
     return (  
            
-        <nav>
+    <nav>
        
         <h1 className="header">BUILD A ZOO</h1>
         <h3 className="nav-name">{zooKeeperName}'S ZOO</h3>
-    
-
-      
-
-      
-          
       
             <p className="links">
                 <Link to = '/'>FIND ANIMALS</Link>
@@ -26,8 +20,6 @@ const Navbar = () => {
             <p className="links-two">
                 <Link to = '/zoo'>VISIT  MY  ZOO </Link>
             </p>
-         
-
             
 
     </nav>
