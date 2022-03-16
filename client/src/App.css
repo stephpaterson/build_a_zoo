@@ -5,7 +5,7 @@
 .day-time {
   background-image: url("https://img.freepik.com/free-vector/organic-flat-jungle-background_23-2148952811.jpg?t=st=1647337714~exp=1647338314~hmac=43fe254366ac8d06c49c9ced6bcf90df2c2fd4fdf68c99ac332241f51da32978&w=1800") ;
   background-size: cover;
-  
+  min-height: 100vh;
 }
 
 .night-time {
@@ -60,6 +60,22 @@ nav {
   max-height: 500px;
 }
 
+.animal-page-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.animal-header {
+
+  text-align: center;
+  background-color: rgb(255, 255, 255, 0.6);
+  border-radius: 15px;
+  width: 50%;
+  margin: 10px;
+}
+
 
 .carousel {
 
@@ -70,10 +86,7 @@ nav {
 }
 
   
-
-
 .header {
-  
   text-align: center;
   font-family: 'Slackey', cursive;
   font-size: 6rem;
@@ -123,11 +136,6 @@ a:visited {
   background-color: transparent;
 }
 
-
-.animal-header {
-  padding: 10%;
-  text-align: center;
-}
 
 .discover-bttn {
  

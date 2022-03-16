@@ -27,14 +27,14 @@ const AnimalsContainer = ({fetchedAnimals, setAddAnimal, removeFetchedAnimal}) =
 
     const checkAnswer = (quizAnswers) => {
         if(quizAnswers === selectedAnimal.animal_type) {
-            setMessage('Correct answer, the animal has been added to your Zoo');
+            setMessage(`Well done! A ${selectedAnimal.name} is a ${selectedAnimal.animal_type} and it's on its way to your zoo!`);
             addAnimalToZoo();
             setTimeout(() => {
                 toggleModal()
                 setMessage('')
             }, 1500);
         } else {
-            setMessage('Try again')
+            setMessage("Oops! That's not right, have another go.")
         }
     }
 
@@ -44,12 +44,12 @@ const AnimalsContainer = ({fetchedAnimals, setAddAnimal, removeFetchedAnimal}) =
         <Carousel.Item key={animal.id}>
         <div className="img">
             <img 
-            className="w-100"
+            className="h-100 w-100"
             src={animal.image_link}
             alt="animal name"
                 style={{objectFit: "cover"}}
             />
-            </div>
+        </div>
             <Carousel.Caption>
               <h3> {animal.name}</h3> 
               <button className="add-animal-bttn" onClick={() => handleClick(animal)} >ADD ANIMAL TO YOUR ZOO</button>
@@ -67,7 +67,7 @@ const AnimalsContainer = ({fetchedAnimals, setAddAnimal, removeFetchedAnimal}) =
             isOpen={isModalOpen}
             ariaHideApp={false}
             className={"quiz-modal"}>
-            <p className='what-animal'>What type of animal is this?</p>
+            <p className='what-animal'>Wait! Before you can add the {selectedAnimal.name} to your zoo we need to make sure you know a thing or two about animals. What type of animal it is?</p>
             <p>{message}</p>
             <div className="buttons">
                 <button className='quiz-button' onClick={() => {checkAnswer('Mammal')}}>Mammal</button>

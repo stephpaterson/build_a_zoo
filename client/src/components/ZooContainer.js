@@ -68,7 +68,7 @@ const ZooContainer = ({zooAnimals, removeAnimal}) => {
 
             <div className="zoo-buttons-and-animals-container">
                 <div className="zoo-button-container">
-                <h1>VIEW MY ANIMALS</h1>
+                <h1>View My Animals</h1>
                     <div className="zoo-button-flex">
                     <button className="zoo-buttons" onClick={handleClick} value=''>Show all the animals</button>
                     <button className="zoo-buttons" onClick={handleClick} value='Diurnal'>Visit zoo in the daytime</button>
