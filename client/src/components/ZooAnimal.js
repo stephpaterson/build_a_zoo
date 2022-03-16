@@ -1,11 +1,14 @@
 import './ZooAnimal.css'
 import { deleteAnimal } from "../AnimalService";
+import styled from 'styled-components';
 
 const ZooAnimal = ({animal, removeAnimal}) => {
      const  handleClick = () => {
             removeAnimal(animal._id)
             deleteAnimal(animal._id)
      }
+
+
 
     return(
 

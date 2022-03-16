@@ -34,12 +34,13 @@
   }
 
 .front img{
-    width: 250px;
-    height: 300px;
+    width: 100%;
     object-fit: cover
 }
 
 .front{
+    display: flex;
+    align-items: center;
     background-color: #3e8e41;
     transform: perspective(600px) rotateY(0deg);
 }
