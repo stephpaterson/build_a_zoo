@@ -17,6 +17,14 @@
 
 }
 
+.zoo-button-container {
+    background-color: rgb(255, 255, 255, 0.6);
+    border-radius: 15px;
+    padding-bottom: 15px;
+    width: 70%;
+    align-self: center;
+}
+
 .show-info {
     padding: 20px;
     width: 80%;
@@ -24,7 +32,7 @@
 }
 
 .info-background {
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: rgb(255, 255, 255, 0.6);
     border-radius: 15px;
 }
 
