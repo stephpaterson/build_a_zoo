@@ -1,25 +1,6 @@
-/* .light {
-    background-color: lightskyblue;
-} */
-
 .zoo-page-div {
     position: relative;
 }
-
-/* .dark {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    margin-top: 10px;
-    /* content: ''; */
-    /* position: absolute;
-    top: 200;
-    left: 0;
-    width: 90vh;
-    height: 90vh;
-    background: rgba(0,0,0,0.7);
-
-} */ 
 
 .centre-info{
     display: flex;
@@ -36,22 +17,24 @@
 
 }
 
+.zoo-button-container {
+    background-color: rgb(255, 255, 255, 0.6);
+    border-radius: 15px;
+    padding-bottom: 15px;
+    width: 70%;
+    align-self: center;
+}
+
 .show-info {
     padding: 20px;
     width: 80%;
     text-align: center;
 }
 
-
-/* .zoo-buttons-and-animals-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-} */
+.info-background {
+    background-color: rgb(255, 255, 255, 0.6);
+    border-radius: 15px;
+}
 
 .zoo-animals-container {
     display: grid;
@@ -59,3 +42,4 @@
     grid-gap: 10px;
     margin-top: 10px;
 }
+

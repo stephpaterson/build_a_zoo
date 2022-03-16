@@ -25,7 +25,7 @@ const ZooAnimal = ({animal, removeAnimal}) => {
                         <p><span className="orange">Type: </span>{animal.animal_type}</p>
                         <p><span className="orange">Habitat: </span>{animal.habitat}</p>
                         <p><span className="orange">Diet: </span>{animal.diet}</p>
-                        <button className="release-button" variant="primary" onClick={handleClick}> Release Animal </button>
+                        <button className="release-button" onClick={handleClick}> Release Animal </button>
                     </div>
                 </div>
 
