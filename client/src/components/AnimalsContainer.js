@@ -46,11 +46,13 @@ const AnimalsContainer = ({fetchedAnimals, setAddAnimal, removeFetchedAnimal}) =
             <img 
             className="w-100"
             src={animal.image_link}
-            alt="animal name"/>
+            alt="animal name"
+                style={{objectFit: "cover"}}
+            />
             </div>
             <Carousel.Caption>
               <h3> {animal.name}</h3> 
-              <button onClick={() => handleClick(animal)} >Add Animal to Your Zoo</button>
+              <button className="add-animal-bttn" onClick={() => handleClick(animal)} >ADD ANIMAL TO YOUR ZOO</button>
             </Carousel.Caption>
         </Carousel.Item>
 

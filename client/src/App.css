@@ -1,6 +1,8 @@
 body {
   background-image: url("https://img.freepik.com/free-vector/organic-flat-jungle-background_23-2148952811.jpg?t=st=1647337714~exp=1647338314~hmac=43fe254366ac8d06c49c9ced6bcf90df2c2fd4fdf68c99ac332241f51da32978&w=1800") ;
   background-size: cover;
+  font-family: 'Lilita One', cursive;
+
 
 }
 
@@ -19,7 +21,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 8px solid #e9a303;
+  border: 8px solid #4CAF50;
+  border-radius: 15px;
   /* font-family: ;
   font-size: ; */
 }
@@ -45,20 +48,26 @@ body {
 
 
   .carousel {
+  
     width: 500px;
     height: 500px;
     margin: auto;
+    margin-top: -10%;
+
+    /* border: solid black 5px; */
   }
+
+  
 
 
   .header {
     
     text-align: center;
-    /* padding: 1%; */
-    font-family: 'Lilita One', cursive;
+    /* padding: 0.7%; */
+    font-family: 'Slackey', cursive;
     font-size: 6rem;
     font-weight: 50;
-    margin: 1%;
+    margin: 0.1%;
     text-shadow: 8px 5px 20px #136324; 
     
    
@@ -69,10 +78,12 @@ body {
   .nav-name {
   
     font-size: 1.5rem;
-    padding: 60px;
-    margin: -3%;
-    font-family: 'Lilita One', cursive;
+    padding: 20px; 
+   margin: -1%;
+   
     text-transform: uppercase;
+    text-align: center;
+   
     /* text-decoration: underline; */
     /* text-shadow: 4px 5px 10px #136324; */
    
@@ -80,28 +91,30 @@ body {
   }
 
  .links {
-max-width: fit-content;
- 
-  padding: 0.7%;
+/* max-width: fit-content; */
+margin-right: 25px;
+  padding: 10px 25px;
   /* margin: 2.3%; */
- border: 5px solid black;
+ border: 5px solid rgb(19, 190, 212);
  border-radius: 15px;
- margin-left: 89%;
- margin-top: -8%;
+  margin-left: 85%;
+ margin-top: -10%; 
+ background-color: aqua;
  /* text-shadow: 4px 4px 5px #136324; */
  
   
  }
 
  .links-two {
-  max-width: fit-content;
-   
-    padding: 0.7%;
+  /* max-width: fit-content; */
+    margin-right: 25px;
+    padding: 10px 25px;
     /* margin: 2.3%; */
-   border: 5px solid black;
+   border: 5px solid rgb(19, 190, 212);
    border-radius: 15px;
-   margin-left: 89%;
-   margin-bottom: -4%;
+   margin-left: 85%;
+   margin-bottom: -4%; 
+   background-color: aqua;
    /* text-shadow: 4px 4px 5px #136324; */
    
     
@@ -110,15 +123,75 @@ max-width: fit-content;
  a:link {
   text-decoration: none;
   color: black;
-  font-family: 'Lilita One', cursive;
+ 
 }
 
 a:visited {
   color: black;
   text-decoration: none;
-  font-family: 'Lilita One', cursive;
+  
   background-color: transparent;
 }
+
+
+.animal-header {
+  padding: 10%;
+  text-align: center;
+  
+  /* text-decoration: underline; */
+  /* text-decoration-color: aqua; */
+  /* text-decoration-thickness: 5px; */
+
+}
+
+.discover-bttn {
+margin-left: 78%;
+border-radius: 15px;
+
+
+}
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  /* outline: none; */
+  color: black#fff;
+  background-color: #f08522;
+  border: 5px solid #f76402;
+ 
+  /* box-shadow: 0 9px #999; */
+  border-radius: 50px;
+ 
+}
+
+.button:hover {background-color: #3e8e41}
+
+/* .button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+} */
+
+
+.modal-bttn {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px; 
+ 
+}
+
+.add-animal-bttn{
+  border-radius: 15px;
+  padding: 5px 10px;
+ 
+}
+   
+
+
 
 
 

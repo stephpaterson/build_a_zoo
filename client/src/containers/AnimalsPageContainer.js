@@ -27,10 +27,11 @@ const AnimalPageContainer = () =>{
 
     return(
         <>
-        <div>
-            <h1>Choose some animals for your zoo.</h1>
-            <button onClick={getAnimals}>Discover More Animals</button>
-        </div>
+        <div className="animal-header">
+            <h1>CHOOSE SOME ANIMNALS FOR YOUR ZOO</h1>
+            </div>
+            <button className="discover-bttn" onClick={getAnimals}>DISCOVER MORE ANIMALS</button>
+        
         <AnimalsContainer fetchedAnimals={fetchedAnimals} removeFetchedAnimal={removeFetchedAnimal}/>
             
         </>
