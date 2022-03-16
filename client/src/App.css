@@ -40,6 +40,7 @@ body {
 
 
 .img {
+ 
   width: auto;
   max-height: 500px;
  
@@ -48,8 +49,8 @@ body {
 
 
   .carousel {
-  
-    width: 500px;
+ 
+    width: 600px;
     height: 500px;
     margin: auto;
     margin-top: -10%;
@@ -68,7 +69,7 @@ body {
     font-size: 6rem;
     font-weight: 50;
     margin: 0.1%;
-    text-shadow: 8px 5px 20px #136324; 
+    text-shadow: 10px 5px 2px #f08522; 
     
    
      
@@ -78,9 +79,8 @@ body {
   .nav-name {
   
     font-size: 1.5rem;
-    padding: 20px; 
-   margin: -1%;
-   
+    /* padding: 20px;  */
+
     text-transform: uppercase;
     text-align: center;
    
@@ -91,30 +91,37 @@ body {
   }
 
  .links {
-/* max-width: fit-content; */
+max-width: fit-content;
 margin-right: 25px;
-  padding: 10px 25px;
+  padding: 8px 15px;
   /* margin: 2.3%; */
- border: 5px solid rgb(19, 190, 212);
+ /* border: 5px solid rgb(19, 190, 212); */
+ border: 5px solid #f76402;
  border-radius: 15px;
   margin-left: 85%;
  margin-top: -10%; 
- background-color: aqua;
+ background-color: #f08522;
+   box-shadow: 0 8px #fab330;
+ 
+
+ /* background-color: aqua; */
  /* text-shadow: 4px 4px 5px #136324; */
  
   
  }
 
  .links-two {
-  /* max-width: fit-content; */
+  max-width: fit-content;
     margin-right: 25px;
-    padding: 10px 25px;
+    padding: 8px 15px;
     /* margin: 2.3%; */
-   border: 5px solid rgb(19, 190, 212);
+   border: 5px solid #f76402;
    border-radius: 15px;
    margin-left: 85%;
    margin-bottom: -4%; 
-   background-color: aqua;
+  
+   background-color: #f08522;
+   box-shadow: 0 8px #fab330;
    /* text-shadow: 4px 4px 5px #136324; */
    
     
@@ -145,8 +152,11 @@ a:visited {
 }
 
 .discover-bttn {
+ 
 margin-left: 78%;
 border-radius: 15px;
+box-shadow: 0 8px orange;
+padding: 25px 25px;
 
 
 }
@@ -187,8 +197,14 @@ button {
 .add-animal-bttn{
   border-radius: 15px;
   padding: 5px 10px;
+  box-shadow: 0 8px orange;
+ 
+
  
 }
+
+
+
    
 
 

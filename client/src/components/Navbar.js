@@ -18,7 +18,7 @@ const Navbar = () => {
       
 
       
-
+          
       
             <p className="links">
                 <Link to = '/'>FIND ANIMALS</Link>
