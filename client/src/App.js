@@ -43,7 +43,7 @@ function App() {
         <h1>Welcome!</h1>
         <p>Welcome to build a zoo! Explore different animals and learn about them in your Zoo!</p>
         <form onSubmit={handleSubmit} className="zookeeper-form">
-            <label className="welcome-label">What's your Zoo Keeper name?</label>
+            <label >What's your Zoo Keeper name?</label>
             <input className="zookeeper-input" type="text" id="name" name="name" onChange={handleNameChange} autoFocus/>
 
             <button className="modal-bttn" onClick={toggleModal}>Ok</button>
