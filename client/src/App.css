@@ -167,8 +167,18 @@ margin-left: 78%;
 border-radius: 15px;
 box-shadow: 0 8px orange;
 padding: 25px 25px;
+}
 
+.zoo-buttons{
+  border-radius: 15px;
+  box-shadow: 0 8px orange;
+  padding: 5px 5px;
+  width: 200px;
+}
 
+.zoo-button-flex{
+  display: flex;
+  justify-content: space-around;
 }
 
 button {
