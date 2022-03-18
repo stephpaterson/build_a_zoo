@@ -1,0 +1,35 @@
+.quiz-modal {
+background-color: #ffffff;
+width: 50vw;
+height: 77vh;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border: 8px solid #e9a303;
+}
+
+.quiz-modal p {
+  text-align: center;
+  padding: 0 5px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz-button {
+    width: 250px;
+    margin-bottom: 2px;
+    border-radius: 15px;
+}
+
+.what-animal {
+  font-size: 20px;
+  text-align: center;
+}

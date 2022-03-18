@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.middle h3 {
+    margin:0;
+    padding: 0;
+}
+
+.card{
+    cursor: pointer;
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+  }
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+  }
+
+.front img{
+    width: 100%;
+    object-fit: cover
+}
+
+.front{
+    display: flex;
+    align-items: center;
+    background-color: #3e8e41;
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.back{
+    background: #f1f1f1;
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.back-content{
+    color: black;
+    text-align: center;
+    width: 100%;
+}
+
+.info{
+    margin: 20px 0;
+}
+
+.info p {
+    padding: 0 5px;
+    margin: 3px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.orange {
+    color: #f08522;
+}
+
+.info a{
+display: inline-flex;
+width: 40px;
+height: 40px;
+justify-content: center;
+align-items: center;
+color: #2c3e50;
+font-size: 18px;
+transition: 0.4s;
+border-radius: 50%
+}
+
+.info a:hover{
+background: #2c3e50;
+color: white;
+}
+
+.card:hover > .front{
+transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back{
+transform: perspective(600px) rotateY(0deg);
+}
+
+.release-button {
+    padding: 2px;
+    border-radius: 15px;
+    margin-top: 8px;
+    color: black;
+}
+  
+

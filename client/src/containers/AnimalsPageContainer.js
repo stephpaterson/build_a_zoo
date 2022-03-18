@@ -18,20 +18,26 @@ const AnimalPageContainer = () =>{
     } 
 
     const removeFetchedAnimal = (id) => {
-        const temp = fetchedAnimals.map(s => s)
-        const indexToDel = temp.map(s => s._id).indexOf(id)
-        temp.splice(indexToDel, 1)
+        const temp = fetchedAnimals.filter((animal)=>{
+            return animal.id !== id
+        })
         setFetchedAnimals(temp)
     }   
 
 
     return(
-        <>
-            <h1>Choose your animal to go to your zoo</h1>
-
-            <AnimalsContainer fetchedAnimals={fetchedAnimals} removeFetchedAnimal={removeFetchedAnimal}/>
-            <button onClick={getAnimals}>Show me more animals</button>
-        </>
+        <div className="animal-page-div">
+        <div className="animal-header">
+            <h1>Find Animals For Your Zoo</h1>
+            </div>
+            <button className="discover-bttn" onClick={getAnimals}>DISCOVER <div className="line-break"></div>
+            MORE 
+            <div className="line-break"></div>
+            ANIMALS</button>
+        
+        <AnimalsContainer fetchedAnimals={fetchedAnimals} removeFetchedAnimal={removeFetchedAnimal}/>
+            
+        </div>
 
     )
 }

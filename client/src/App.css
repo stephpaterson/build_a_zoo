@@ -1,9 +1,205 @@
+*{
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+.day-time {
+  background-image: url("https://img.freepik.com/free-vector/organic-flat-jungle-background_23-2148952811.jpg?t=st=1647337714~exp=1647338314~hmac=43fe254366ac8d06c49c9ced6bcf90df2c2fd4fdf68c99ac332241f51da32978&w=1800") ;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.night-time {
+  background-image: url("https://img.freepik.com/free-vector/full-moon-night-sky-dark-forest-landscape_107791-9496.jpg?w=1380&t=st=1647444269~exp=1647444869~hmac=6a9b291e2301d4053a6f579e2f584b9b1674d79316c00c6e28b63f4b00c8b3c3");
+  background-size: cover;
+  min-height: 100vh;
+}
+
+nav {
+  height: 20vh;
+}
+
+
+.welcome-modal {
+  background-color: #ffffff;
+  width: 50vw;
+  height: 55vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 8px solid #4CAF50;
+  border-radius: 15px;
+  padding: 0 190px;
+}
+
+.welcome-modal label,
+.welcome-modal p {
+  text-align: center;
+}
+
+
+
 .zookeeper-form{
   display: flex;
+  flex-direction: column;
 }
 
 .zookeeper-input{
-  margin-right: 10px;
+  margin: 10px 0;
+  padding: 6px 10px;
+  outline: none;
 }
+
+
+.img {
+  width: auto;
+  max-height: 500px;
+}
+
+.animal-page-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.animal-header {
+
+  text-align: center;
+  background-color: rgb(255, 255, 255, 0.6);
+  border-radius: 15px;
+  width: 50%;
+  margin: 10px;
+}
+
+
+.carousel {
+
+  width: 600px;
+  height: 500px;
+  margin: auto;
+  margin-top: -10%;
+}
+
+  
+.header {
+  text-align: center;
+  font-family: 'Slackey', cursive;
+  font-size: 6rem;
+  font-weight: 50;
+  margin: 0.1%;
+  text-shadow: 10px 5px 2px #f08522; 
+}
+
+.nav-name {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.links {
+max-width: fit-content;
+margin-right: 25px;
+padding: 8px 15px;
+border: 5px solid #f76402;
+border-radius: 15px;
+margin-left: 85%;
+margin-top: -10%; 
+background-color: #f08522;
+box-shadow: 0 8px #fab330;
+}
+
+.links-two {
+  max-width: fit-content;
+  margin-right: 25px;
+  padding: 8px 15px;
+  border: 5px solid #f76402;
+  border-radius: 15px;
+  margin-left: 85%;
+  margin-bottom: -4%; 
+  background-color: #f08522;
+  box-shadow: 0 8px #fab330;
+}
+
+ a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+
+.discover-bttn {
+ 
+margin-left: 78%;
+border-radius: 15px;
+box-shadow: 0 8px orange;
+padding: 25px 25px;
+}
+
+.zoo-buttons{
+  border-radius: 15px;
+  box-shadow: 0 8px orange;
+  padding: 5px 5px;
+  width: 200px;
+}
+
+.zoo-button-flex{
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: black#fff;
+  background-color: #f08522;
+  border: 5px solid #f76402;
+  border-radius: 50px;
+ 
+}
+
+.button:hover {background-color: #3e8e41}
+
+
+.modal-bttn {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px; 
+ 
+}
+
+.add-animal-bttn{
+  border-radius: 15px;
+  padding: 5px 10px;
+  box-shadow: 0 8px orange;
+}
+
+
+
+   
+
+
+
+
+
+   
+
+
+
+
+
 
 

@@ -1,0 +1,45 @@
+.zoo-page-div {
+    position: relative;
+}
+
+.centre-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.zoo-buttons-and-animals-container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    text-align: center;
+
+}
+
+.zoo-button-container {
+    background-color: rgb(255, 255, 255, 0.6);
+    border-radius: 15px;
+    padding-bottom: 15px;
+    width: 70%;
+    align-self: center;
+}
+
+.show-info {
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+}
+
+.info-background {
+    background-color: rgb(255, 255, 255, 0.6);
+    border-radius: 15px;
+}
+
+.zoo-animals-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+
